@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Support\StorageImage;
 use Illuminate\Database\Eloquent\Model;
+
 class Payment extends Model
 {
     protected $table = 'payments' ;
@@ -63,4 +65,9 @@ class Payment extends Model
     public function isPending(): bool  { return $this->status === 'pending'; }
     public function isApproved(): bool { return $this->status === 'approved'; }
     public function isRejected(): bool { return $this->status === 'rejected'; }
+
+    public function getProofImageUrlAttribute(): ?string
+    {
+        return StorageImage::url($this->proof_image);
+    }
 }
