@@ -1,6 +1,5 @@
 <?php
 
 return [
-    'logo_url' => 'images/logo.png',
-    'org_default_image' => 'https://images.unsplash.com/photo-1559027615-cd762186c6cb?q=80&w=600&auto=format&fit=crop',
+    'logo_url' => 'https://lh3.googleusercontent.com/d/1wJybsEpFo_DAx0tIW1Lqwkr3jYW2gyFw',
 ];
